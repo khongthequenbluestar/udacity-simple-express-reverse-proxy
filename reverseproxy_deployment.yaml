@@ -15,7 +15,7 @@ spec:
         service: ducta11-kubernetes-simple-express-reverseproxy
     spec:
       containers:
-      - image: khongthequenbluestar/simple-reverse-proxy
+      - image: khongthequenbluestar/udacity-simple-express-reverse-proxy
         name: ducta11-kubernetes-simple-express-reverseproxy
         imagePullPolicy: Always          
         resources:

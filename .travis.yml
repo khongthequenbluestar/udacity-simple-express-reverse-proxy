@@ -15,10 +15,10 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple-reverse-proxy .
-  - docker tag simple-reverse-proxy khongthequenbluestar/simple-reverse-proxy:latest
+  - docker build -t udacity-simple-express-reverse-proxy .
+  - docker tag udacity-simple-express-reverse-proxy "$DOCKER_USERNAME"/udacity-simple-express-reverse-proxy:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push khongthequenbluestar/simple-reverse-proxy
+  - docker push "$DOCKER_USERNAME"/udacity-simple-express-reverse-proxy
 
