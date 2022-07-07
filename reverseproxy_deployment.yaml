@@ -6,6 +6,9 @@ metadata:
   name: ducta11-kubernetes-simple-express-reverseproxy
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+        app.kubernetes.io/name: ducta11-kubernetes-simple-express-reverseproxy
   template:
     metadata:
       labels:
